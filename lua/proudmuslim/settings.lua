@@ -2,10 +2,11 @@
 vim.g.mapleader = " "
 
 vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
--- Don't wrap lines. 
+-- Don't wrap lines.
 vim.opt.wrap = false
 
 vim.opt.swapfile = false
@@ -16,7 +17,6 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 
--- Line numbers 
+-- Line numbers
 vim.wo.relativenumber = true
 vim.wo.number = true
-

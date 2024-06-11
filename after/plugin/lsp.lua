@@ -11,10 +11,10 @@ lsp.setup_servers(servers)
 
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
--- CMP 
+-- CMP
 
 local cmp = require('cmp')
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
+local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
   ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
@@ -29,21 +29,21 @@ lsp.setup_nvim_cmp({
   mapping = cmp_mappings
 })
 
--- Misc preferences 
+-- Misc preferences
 
 lsp.set_preferences({
-    suggest_lsp_servers = false,
-    sign_icons = {
-        error = 'E',
-        warn = 'W',
-        hint = 'H',
-        info = 'I'
-    }
+  suggest_lsp_servers = false,
+  sign_icons = {
+    error = 'E',
+    warn = 'W',
+    hint = 'H',
+    info = 'I'
+  }
 })
 
 -- On attach stuff
 lsp.on_attach(function(client, bufnr)
-  local opts = {buffer = bufnr, remap = false}
+  local opts = { buffer = bufnr, remap = false }
 
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
@@ -56,4 +56,3 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
-

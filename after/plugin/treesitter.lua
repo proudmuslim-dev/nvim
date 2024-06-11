@@ -1,22 +1,21 @@
-require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all" (the five listed parsers should always be installed)
+require('nvim-treesitter.configs').setup {
   ensure_installed = {
-      "rust",
-      "lua",
-      "vim",
-      "vimdoc",
-      "query",
-      "diff",
-      "markdown",
-      "markdown_inline",
-      "git_config",
-      "git_rebase",
-      "gitattributes",
-      "gitcommit",
-      "gitignore",
-      "c",
-      "ocaml",
-      "nasm",
+    "rust",
+    "lua",
+    "vim",
+    "vimdoc",
+    "query",
+    "diff",
+    "markdown",
+    "markdown_inline",
+    "git_config",
+    "git_rebase",
+    "gitattributes",
+    "gitcommit",
+    "gitignore",
+    "c",
+    "ocaml",
+    "nasm",
   },
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -35,4 +34,3 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
-
