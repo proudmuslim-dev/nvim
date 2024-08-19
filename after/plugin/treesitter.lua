@@ -16,6 +16,9 @@ require('nvim-treesitter.configs').setup {
     "c",
     "ocaml",
     "nasm",
+    "json",
+    "jsonc",
+    "hyprlang",
   },
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,

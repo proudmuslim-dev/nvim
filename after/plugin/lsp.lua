@@ -2,7 +2,6 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
--- local servers = { 'rust_analyzer', 'ocamllsp' }
 local servers = { 'rust_analyzer', 'clangd', 'texlab' }
 
 lsp.ensure_installed(servers)
@@ -12,7 +11,6 @@ lsp.setup_servers(servers)
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 -- CMP
-
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -30,7 +28,6 @@ lsp.setup_nvim_cmp({
 })
 
 -- Misc preferences
-
 lsp.set_preferences({
   suggest_lsp_servers = false,
   sign_icons = {
