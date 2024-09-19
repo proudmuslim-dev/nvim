@@ -29,6 +29,7 @@ return require('packer').startup(function(user)
   use('theprimeagen/harpoon')
 
   -- Syntax highlighting
+  use 'brenoprata10/nvim-highlight-colors'
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use {
     'folke/todo-comments.nvim',

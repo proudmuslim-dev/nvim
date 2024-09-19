@@ -1,24 +1,48 @@
 require('nvim-treesitter.configs').setup {
   ensure_installed = {
+    -- Compiled
     "rust",
+    "c",
+    "haskell",
+    "ocaml",
+    "nasm",
+
+    -- Scripting
     "lua",
     "vim",
+    "fish",
+    "awk",
+    "bash",
+    "python",
+    "javascript",
+
+    -- Conf
+    "toml",
+    "ssh_config",
+    "json",
+    "jsonc",
+    "zathurarc",
+    "hyprlang",
+
+    -- Docs
     "vimdoc",
-    "query",
+    "markdown_inline",
+
+    -- Misc
     "diff",
     "markdown",
-    "markdown_inline",
+    "query",
+    "sql",
+    "prisma",
+    "html",
+    "css",
+
+    -- Git
     "git_config",
     "git_rebase",
     "gitattributes",
     "gitcommit",
     "gitignore",
-    "c",
-    "ocaml",
-    "nasm",
-    "json",
-    "jsonc",
-    "hyprlang",
   },
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
