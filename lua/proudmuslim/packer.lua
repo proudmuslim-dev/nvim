@@ -12,6 +12,7 @@ return require('packer').startup(function(user)
       { 'hrsh7th/nvim-cmp' }
     }
   }
+  use 'rcarriga/nvim-notify'
   use {
     'rose-pine/neovim',
     as = 'rose-pine',
