@@ -37,8 +37,12 @@ return require('packer').startup(function(user)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
-  -- Misc
+  -- Text editing
   use('mbbill/undotree')
+  use {
+    'kylechui/nvim-surround',
+    tag = '*',
+  }
 
   -- LSP
   use {
