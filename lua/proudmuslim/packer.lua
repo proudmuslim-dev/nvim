@@ -46,22 +46,22 @@ return require('packer').startup(function(user)
 
   -- LSP
   use {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v2.x',
+    'mason-org/mason-lspconfig.nvim',
     requires = {
-      { 'neovim/nvim-lspconfig' }, -- Required
-      {                            -- Optional
-        'williamboman/mason.nvim',
+      {
+        'mason-org/mason.nvim',
         run = function()
           pcall(vim.cmd, 'MasonUpdate')
         end,
       },
-      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+      {'neovim/nvim-lspconfig'},
 
       -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },     -- Required
-      { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-      { 'L3MON4D3/LuaSnip' },     -- Required
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+      { 'hrsh7th/vim-vsnip' },
     }
   }
 end)

@@ -13,6 +13,7 @@ require('nvim-treesitter.configs').setup {
     "fish",
     "awk",
     "bash",
+    "racket",
     "python",
     "javascript",
 
