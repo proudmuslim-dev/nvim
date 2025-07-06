@@ -17,6 +17,8 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 
+vim.opt.signcolumn = "yes"
+
 -- Line numbers
 vim.wo.relativenumber = true
 vim.wo.number = true
