@@ -20,6 +20,12 @@ require("mason-lspconfig").setup {
   }
 }
 
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function()
+    vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
+  end
+})
+
 -- CMP
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 cmp.setup {
