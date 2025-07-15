@@ -8,4 +8,4 @@
 
 </div>
 
-My personal Neovim configuration. Yes, I've finally gotten around to uploading it. Currently using [Packer](https://github.com/wbthomason/packer.nvim), migration to [Lazy.nvim](https://github.com/folke/lazy.nvim) is planned.
+Personal Neovim configuration using [Lazy.nvim](https://github.com/folke/lazy.nvim)
