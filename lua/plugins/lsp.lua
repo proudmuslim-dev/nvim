@@ -1,6 +1,7 @@
 return {
   {
     "mason-org/mason-lspconfig.nvim",
+    event = "VeryLazy",
     config = function()
       local cmp = require("cmp")
       local cmp_lsp = require("cmp_nvim_lsp")

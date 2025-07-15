@@ -4,7 +4,7 @@
   "cmp-path": { "branch": "main", "commit": "e52e640b7befd8113b3350f46e8cfcfe98fcf730" },
   "harpoon": { "branch": "harpoon2", "commit": "ed1f853847ffd04b2b61c314865665e1dadf22c7" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
-  "mason-lspconfig.nvim": { "branch": "main", "commit": "acb2d97a5c5e3f58156cb387fdf6035c34cd2768" },
+  "mason-lspconfig.nvim": { "branch": "main", "commit": "bc743e4f3dc4b6d22b0a9e0b68a6664d93f8a694" },
   "mason.nvim": { "branch": "main", "commit": "8024d64e1330b86044fed4c8494ef3dcd483a67c" },
   "neovim": { "branch": "main", "commit": "f93360149e9ed4df8677fbb07c7231ea0fd03b97" },
   "noice.nvim": { "branch": "main", "commit": "0427460c2d7f673ad60eb02b35f5e9926cf67c59" },

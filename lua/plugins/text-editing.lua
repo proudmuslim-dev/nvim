@@ -8,6 +8,7 @@ return {
   },
   {
     "kylechui/nvim-surround",
-    lazy = false,
+    event = "VeryLazy",
+    version = "^3.0.0"
   },
 }
