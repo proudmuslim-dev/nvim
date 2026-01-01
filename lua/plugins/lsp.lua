@@ -46,7 +46,7 @@ return {
           ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
           ["<C-y>"] = cmp.mapping.confirm({ select = true }),
           ["<CR>"] = cmp.mapping.confirm({ select = true }),
-          ["<C-Space>"] = cmp.mapping.complete(), --  TODO: New keybind, would rather save this for fcitx5
+          ["<C-m>"] = cmp.mapping.complete(),
         }),
 
         sources = cmp.config.sources({
@@ -54,6 +54,15 @@ return {
           { name = "buffer" }
         })
       }
+
+      -- Fix irritating default
+      vim.keymap.set('n', ']d', function()
+        vim.diagnostic.goto_next({ float = true })
+      end)
+
+      vim.keymap.set('n', '[d', function()
+        vim.diagnostic.goto_prev({ float = true })
+      end)
     end,
     dependencies = {
       {
