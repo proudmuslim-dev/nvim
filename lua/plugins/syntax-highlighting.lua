@@ -1,79 +1,56 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    branch = "master",
+    branch = "main",
     lazy = false,
     build = ":TSUpdate",
     config = function()
-      require('nvim-treesitter.configs').setup {
-        ensure_installed = {
-          -- Compiled
-          "rust",
-          "c",
-          "haskell",
-          "ocaml",
-          "nasm",
+      require('nvim-treesitter').install {
+        -- Compiled
+        "rust",
+        "c",
+        "haskell",
+        "ocaml",
+        "nasm",
 
-          -- Scripting
-          "lua",
-          "vim",
-          "fish",
-          "awk",
-          "bash",
-          "racket",
-          "python",
-          "javascript",
+        -- Scripting
+        "lua",
+        "vim",
+        "fish",
+        "awk",
+        "bash",
+        "racket",
+        "python",
+        "javascript",
 
-          -- Conf
-          "nix",
-          "toml",
-          "ssh_config",
-          "json",
-          "jsonc",
-          "zathurarc",
-          "hyprlang",
+        -- Conf
+        "nix",
+        "toml",
+        "ssh_config",
+        "json",
+        "jsonc",
+        "zathurarc",
+        "hyprlang",
 
-          -- Docs
-          "vimdoc",
-          "markdown_inline",
+        -- Docs
+        "vimdoc",
+        "markdown_inline",
 
-          -- Misc
-          "diff",
-          "markdown",
-          "query",
-          "sql",
-          "prisma",
-          "html",
-          "css",
+        -- Misc
+        "diff",
+        "markdown",
+        "query",
+        "sql",
+        "prisma",
+        "html",
+        "css",
 
-          -- Git
-          "git_config",
-          "git_rebase",
-          "gitattributes",
-          "gitcommit",
-          "gitignore",
-        },
-        -- Install parsers synchronously (only applied to `ensure_installed`)
-        sync_install = false,
-
-        -- Automatically install missing parsers when entering buffer
-        -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-        auto_install = true,
-
-        highlight = {
-          enable = true,
-
-          -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-          -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-          -- Using this option may slow down your editor, and you may see some duplicate highlights.
-          -- Instead of true it can also be a list of languages
-          additional_vim_regex_highlighting = false,
-        },
-
-        indent = {
-          enable = true,
-          disable = { "nix", },
-        },
+        -- Git
+        "git_config",
+        "git_rebase",
+        "gitattributes",
+        "gitcommit",
+        "gitignore",
       }
     end
   },

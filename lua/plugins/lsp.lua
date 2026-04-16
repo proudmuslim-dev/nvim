@@ -14,16 +14,13 @@ return {
 
       require("mason").setup()
       require("mason-lspconfig").setup {
-        ensure_installed = { "rust_analyzer", "hls", "clangd", "lua_ls", "html" },
-
-        handlers = {
-          function(server) -- default handler
-            require("lspconfig")[server].setup {
-              capabilities = capabilities
-            }
-          end,
-        }
+        -- ensure_installed = { "rust_analyzer", "hls", "clangd", "lua_ls", "html" },
+        ensure_installed = { "rust_analyzer", "clangd", "lua_ls" },
+        automatic_installation = { exclude = { "hls" } },
       }
+
+      vim.lsp.config('*', { capabilities = capabilities })
+      vim.lsp.enable({ 'rust_analyzer', 'clangd', 'lua_ls', 'hls' })
 
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function()
