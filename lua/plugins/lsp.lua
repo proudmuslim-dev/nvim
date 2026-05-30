@@ -15,8 +15,8 @@ return {
       require("mason").setup()
       require("mason-lspconfig").setup {
         -- ensure_installed = { "rust_analyzer", "hls", "clangd", "lua_ls", "html" },
-        ensure_installed = { "rust_analyzer", "clangd", "lua_ls" },
-        automatic_installation = { exclude = { "hls" } },
+        ensure_installed = { "clangd", "lua_ls" },
+        automatic_installation = { exclude = { "hls", "rust_analyzer" } },
       }
 
       vim.lsp.config('*', { capabilities = capabilities })
