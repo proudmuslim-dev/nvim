@@ -2,7 +2,7 @@ return {
   {
     "m00qek/baleia.nvim",
     config = function()
-      vim.g.baleia = require("baleia").setup({ })
+      vim.g.baleia = require("baleia").setup({ async = false })
 
       -- Command to colorize the current buffer
       vim.api.nvim_create_user_command("BaleiaColorize", function()
@@ -15,8 +15,12 @@ return {
       -- Automatically colorize content piped from stdin
       vim.api.nvim_create_autocmd('StdinReadPost', {
         callback = function(args)
-          vim.g.baleia.once(args.buf)
-          vim.api.nvim_set_option_value("modified", false, { buf = args.buf })
+          vim.g.baleia.once(vim.api.nvim_get_current_buf())
+          vim.api.nvim_set_option_value("modified", false, { buf = vim.api.nvim_get_current_buf() })
+          --vim.api.nvim_set_option_value("modifiable", true, { buf = buffer })
+          --vim.g.baleia.once(args.buf)
+          --vim.api.nvim_set_option_value("modified", false, { buf = buffer })
+          --vim.api.nvim_set_option_value("modifiable", false, { buf = buffer })
         end,
       })
     end,
