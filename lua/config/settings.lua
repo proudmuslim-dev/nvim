@@ -29,7 +29,7 @@ vim.wo.number = true
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'rust', 'haskell', 'lua', 'html', 'css', 'python', 'javascript',
   'markdown', 'sh', 'fish', 'bash', 'nix', 'ssh_config', 'toml', 'json',
-  'jsonc', 'zathurarc', 'diff', 'git_config', 'git_rebase', 'gitattributes',
+  'diff', 'git_config', 'git_rebase', 'gitattributes',
   'gitcommit', 'gitignore' },
   callback = function()
     -- syntax highlighting, provided by Neovim

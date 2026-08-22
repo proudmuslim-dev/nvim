@@ -28,8 +28,6 @@ return {
         "toml",
         "ssh_config",
         "json",
-        "jsonc",
-        "zathurarc",
         "hyprlang",
 
         -- Docs
